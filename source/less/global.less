@@ -1,5 +1,46 @@
+ // переменные
+@mobile-width: 320px;
+@tablet-width: 700px;
+@desktop-width: 1200px;
 
-  
+@retina-dpi: 144dpi;
+@retina-dppx: 1.5dppx;
+
+ // переменные
+
+ // отладка
+ img:not([alt]), label:not([for]), input[type=submit]:not([value]) {
+      outline: 2px solid red;
+ }
+
+@font-face {
+  font-weight: normal;
+  font-family: "Open Sans";
+  font-style: normal;
+
+  src: url("../fonts/opensans.woff") format("woff");
+}
+
+@font-face {
+  font-weight: normal;
+  font-family: "Open Sans";
+  font-style: normal;
+
+  src: url("../fonts/opensans.woff2") format("woff2");
+}
+
+
+
+
+ // миксины
+
+.reset-list() {
+     margin:0;
+     padding:0;
+     list-style: none;
+}
+
+
 html {
     box-sizing: border-box;
 }
@@ -23,4 +64,12 @@ html {
   img {
     max-width: 100%;
     height: auto;
+  }
+
+  body {
+    min-width: 320px;
+    max-width: 1200px;
+    margin:0 auto;
+    font-family: "Open Sans", Arial, sans-serif;
+    background-color: #ffffff;
   }
