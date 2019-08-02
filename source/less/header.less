@@ -21,10 +21,15 @@
 	&__menu {
 		.reset-list();
 		display: none;
+		}
+
+	&--main-nav--opened &__menu {
+		display: flex;
 		
 		flex-direction: column;
-
 	}
+
+	
 	&__item {
 		color: #ffffff;
 		text-transform: uppercase;
@@ -47,36 +52,97 @@
 
 	&__toggle {
 
-		cursor: pointer;
-		border: none;
-		width: 25px;
-		height: 25px;
-		background-color: transparent;
+		position: absolute;
+  width: 50px;
+  height: 50px;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  top: 10px;
+  right: 20px;
+  outline: none;
 
-		&::before {
-			content: "";
-			position: absolute;
-			top: 29px;
-			right: 19px;
-			width: 27px;
-			height: 4px;
-			background-color: #ffffff;
-			transform: rotate(45deg);
 		}
 
-		&::after {
-			content: "";
-			position: absolute;
-			top: 29px;
-			right: 19px;
-			width: 28px;
-			height: 4px;
-			background-color: #ffffff;
-			transform: rotate(-45deg);
-		}
+	&--closed .main-nav__toggle::before {
+
+	content: "";
+  position: absolute;
+  top: 12px;
+  left: 0;
+  width: 50px;
+  height: 4px;
+  background-color: #ffffff;
+  box-shadow: 0 10px 0 0 #ffffff, 0 21px 0 0 #ffffff; 
 
 
-	}
+}
+
+   &--closed .main-nav__toggle:hover::before {
+     background-color: #d22856;
+     box-shadow: 0 10px 0 0 #d22856, 0 21px 0 0 #d22856; 
+
+ }
+
+
+   &--closed .main-nav__toggle:active::before {
+     background-color: rgba(210, 40, 86, 0.3);
+     box-shadow: 0 10px 0 0 rgba(210, 40, 86, 0.3), 0 21px 0 0 rgba(210, 40, 86, 0.3); 
+   }
+
+   &--opened .main-nav__toggle::before, 
+   &--opened .main-nav__toggle::after {
+
+   	content: "";
+  position: absolute;
+  top: 21px;
+  right: -4px;
+  width: 30px;
+  height: 4px;
+  background-color: #ffffff;
+
+
+   }
+
+   &--opened .main-nav__toggle::before {
+      transform: rotate(45deg);
+      box-shadow: none; 
+  }
+
+   &--opened .main-nav__toggle::after {
+      transform: rotate(-45deg); 
+  }
+
+   &--opened .main-nav__toggle:hover::before, 
+   &--opened .main-nav__toggle:hover::after {
+  
+       background-color: #d22856; 
+   }
+
+
+   /*нет JS, кнопка скрыта*/
+&--nojs .main-nav__toggle {
+  display: none; 
+}
+
+/*нет JS, меню д.б.открыто*/
+&--nojs .main-nav__menu {
+  display: flex; 
+}
+  
+
+
+
+
+
+  
+}
+
+
+@media (min-width: @mobile-width) {
+	.main-nav--closed .main-nav__menu {
+        display: none;
 
 
 }
