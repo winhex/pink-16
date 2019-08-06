@@ -25,7 +25,7 @@
 
                   </div>
 
-                  <ul class="main-nav__menu ">
+                  <ul class="main-nav__menu">
                     <li class="main-nav__item"><a class="main-nav__link" href="#">Главная</a></li>
                     <li class="main-nav__item"><a class="main-nav__link" href="#">Фотографии</a></li>
                     <li class="main-nav__item"><a class="main-nav__link" href="#">Конкурс</a></li>
@@ -35,28 +35,33 @@
         </header>
 
         <main class="page-main">
+            <h2 class="visually-hidden">Скачать приложение Pink</h2>
 
             <div class="download">
                 <div class="download__img">
                     <picture>
-                      <source type="image/webp" media="(min-width: 960px)" srcset="img/iphone-hand-desktop@1x.webp 1x,  img/iphone-hand-desktop@2x.webp 2x">
-                      <source type="image/webp" media="(min-width: 660px)" srcset="img/iphone-hand-tablet@1x.webp 1x,  img/iphone-hand-tablet@2x.webp 2x">
-                      <source type="image/webp" srcset="img/iphone-hand-mobile@1x.webp 1x, img/iphone-hand-mobile@2x.webp 2x">
+                      <source type="image/webp" media="(min-width: 960px)" srcset="img/hand-desktop@1x.webp 1x,  img/hand-desktop@2x.webp 2x">
+                      <source type="image/webp" media="(min-width: 660px)" srcset="img/hand-tablet@1x.webp 1x,  img/hand-tablet@2x.webp 2x">
+                      <source type="image/webp" srcset="img/hand-mobile@1x.webp 1x, img/hand-mobile@2x.webp 2x">
 
-                      <source media="(min-width: 960px)" srcset="img/iphone-hand-desktop@1x.png 1x, img/iphone-hand-desktop@2x.png 2x">
-                      <source media="(min-width: 660px)" srcset="img/iphone-hand-tablet@1x.png 1x, img/iphone-hand-tablet@2x.png 2x">
-                      <img class="intro__img" src="img/iphone-hand-mobile@1x.png" srcset="img/iphone-hand-mobile@2x.png 2x" alt="Рука с телефоном">
+                      <source media="(min-width: 960px)" srcset="img/hand-desktop@1x.png 1x, img/hand-desktop@2x.png 2x">
+                      <source media="(min-width: 660px)" srcset="img/hand-tablet@1x.png 1x, img/hand-tablet@2x.png 2x">
+                      <img class="download__img--hand" src="img/hand-mobile.png" srcset="img/hand-mobile@2x.png 2x" alt="Рука с телефоном">
                     </picture>
                 </div>
 
+            <div class="download__section">
+
                 <h2 class="download__header">Взгляните на жизнь иначе!</h2>
-                <a class="download__link" href="#" ></a>
+                <a class="download__link" href="#" >Скачать приложение</a>
                 <div class="download__icons">
-                    <img class="download__item download__item--apple" src="" alt="" >
-                    <img class="download__item download__item--android" src="" alt="" >
-                    <img class="download__item download__item--ms" src="" alt="" >
-                    <p class="download__text">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+                    <img class="download__item download__item--apple" src="img/logo-apple.svg" alt="" >
+                    <img class="download__item download__item--android" src="img/logo-android.svg" alt="" >
+                    <img class="download__item download__item--ms" src="img/logo-microsoft.svg" alt="" >
+                    
                 </div>
+                <p class="download__text">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+            </div>
 
             </div>
             <div class="offer">
