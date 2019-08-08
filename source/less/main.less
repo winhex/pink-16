@@ -1,9 +1,22 @@
 .download {
 	&__img {
+		position: relative;
 		height: 465px;
     background-image: url(../img/back-mobile@1x.jpg);
     background-size: cover;
     background-position: center top;
+    overflow: hidden;
+
+
+     &--hand {
+     	position: absolute;
+     	bottom: -35px;
+        left: -166px;
+        max-width: none;
+     }
+
+
+
 	}
 
 	&__section {
@@ -12,6 +25,7 @@
 		font-size: 14px;
         font-weight: 300;
         line-height: 24px;
+        padding-top: 35px;
 	}
 
 	&__header {
@@ -41,10 +55,15 @@
         justify-content: space-between;
 		width:205px;
 		margin: 0 auto;
+		padding-top: 35px;
+		padding-bottom: 18px;
 	}
 
 	&__text {
 		text-align: center;
+		margin:0 auto;
+		max-width: 244px;
+		padding-bottom: 31px;
 	}
 
 
