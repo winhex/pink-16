@@ -1,7 +1,7 @@
 .download {
 	&__img {
 		position: relative;
-		height: 465px;
+		min-height: 388px;
     background-image: url(../img/back-mobile@1x.jpg);
     background-size: cover;
     background-position: center top;
@@ -67,6 +67,26 @@
 	}
 
 
+
+
+}
+
+
+@media (min-width: @mobile-width) {
+
+	.download {
+		
+		&__img {
+			min-height: 620px;
+
+			&--hand {
+				bottom: 2px;
+                left: -111px;
+			}
+		}
+
+
+	}
 
 
 }
