@@ -1,5 +1,5 @@
 .main-header {
-	background-color: #283645;
+	background-color: rgba(0, 0, 0, 0.3);
 
 }
 
@@ -9,6 +9,14 @@
 }
 
 .main-nav {
+
+	background-color: rgba(0,0,0,.3);
+    width: 100%;
+    z-index: 2;
+
+	&--closed {
+		position: absolute;
+	}
 
 	&__header {
 		display: flex;
@@ -25,7 +33,7 @@
 
 	&--opened &__menu {
 		display: flex;
-		
+		background-color: #283645;
 		flex-direction: column;
 	}
 
@@ -149,6 +157,11 @@
 
 
 @media (min-width: @tablet-width) {
+	.main-nav {
+		&__header {
+			min-height: 110px;
+		}
+	}
 
 
 }

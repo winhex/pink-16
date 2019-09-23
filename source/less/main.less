@@ -1,11 +1,21 @@
 .download {
-	&__img {
-		position: relative;
-		min-height: 388px;
-    background-image: url(../img/back-mobile@1x.jpg);
-    background-size: cover;
-    background-position: center top;
-    overflow: hidden;
+	 background-color: #283645;
+	 background-image: url("../img/back-mobile@1x.jpg");
+    background-size: 320px auto;
+
+    &::before {
+    	content: "";
+    position: relative;
+    bottom: 0;
+    display: block;
+    width: 320px;
+    height: 396px;
+    margin: 0;
+    margin-left: auto;
+    margin-right: auto;
+    background: url("../img/iphone-hand-mobile@1x.png") left bottom no-repeat;
+    background-size: 258px auto;
+    }
 
 
      &--hand {
@@ -17,7 +27,7 @@
 
 
 
-	}
+	
 
 	&__section {
 		background-color: #1d2631;
@@ -66,10 +76,13 @@
 		padding-bottom: 31px;
 	}
 
-
-
-
 }
+
+
+
+
+
+
 
 
 @media (min-width: @mobile-width) {
@@ -90,3 +103,26 @@
 
 
 }
+
+
+@media (min-width: @tablet-width) {
+
+	.download {
+		position: relative;
+		padding-top: 110px;
+
+		&::before {
+			position: absolute;
+			background: url("../img/hand-tablet.png") left bottom no-repeat;
+		}
+
+
+		&__header {
+			display: block;
+		}
+
+	}
+
+
+
+	}
