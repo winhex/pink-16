@@ -1,7 +1,9 @@
 .download {
 	 background-color: #283645;
 	 background-image: url("../img/back-mobile@1x.jpg");
-    background-size: 320px auto;
+	background-size: 320px auto;
+	background-repeat: no-repeat;
+    background-position: top;
 
     &::before {
     	content: "";
@@ -110,8 +112,10 @@
 	.download {
 		position: relative;
 		padding-top: 110px;
+		min-height: 620px;
 
 		&::before {
+			width: 100%;
 			position: absolute;
 			background: url("../img/hand-tablet.png") left bottom no-repeat;
 		}
@@ -119,6 +123,11 @@
 
 		&__header {
 			display: block;
+		}
+
+		&__section {
+			width: 300px;
+			background-color: transparent;
 		}
 
 	}
