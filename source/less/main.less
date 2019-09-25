@@ -5,7 +5,7 @@
 	background-repeat: no-repeat;
     background-position: top;
 
-    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
     background-image: url("../img/back-mobile@2x.jpg");
     background-size: 320px auto;
   }
@@ -16,7 +16,7 @@
     background-image: url("../img/back-tablet@1x.jpg");
     background-size: 1200px auto;
 
-    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
       background-image: url("../img/back-tablet@2x.jpg");
     }
   }
@@ -25,7 +25,7 @@
     background-image: url("../img/back-desktop@1x.jpg");
     background-size: 2560px auto;
 
-    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
       background-image: url("../img/back-desktop@2x.jpg");
     }
   }
@@ -42,6 +42,10 @@
     margin-right: auto;
     background: url("../img/iphone-hand-mobile@1x.png") left bottom no-repeat;
     background-size: 258px auto;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+        background-image: url("../img/hand-mobile@2x.png");
+      }
     }
 
 
@@ -144,6 +148,12 @@
 			width: 100%;
 			position: absolute;
 			background: url("../img/hand-tablet.png") bottom no-repeat;
+			@media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+            background-image: url("../img/hand-tablet@2x.png");
+            background-size: 700px auto;
+        }
+
+
 		}
 
 
@@ -197,4 +207,55 @@
 
 
 
+	}
+
+
+	@media (min-width: @tablet-width) {
+
+		.download {
+			min-height: 853px;
+		}
+
+
+
+	}
+
+
+	@media (min-width: @desktop-width) {
+		.download {
+			&::before {
+				height:650px;
+				background: url("../img/hand-desktop@1x.png") 26px bottom no-repeat;
+                background-size: 1050px auto;
+                left: 120px;
+
+
+        @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+          background-image: url("../img/hand-desktop@2x.png");
+        }
+			}
+			&__header {
+				font-size: 50px;
+				line-height: 56px;
+				width: auto;
+				margin: 0 auto 58px;
+			}
+
+			&__section {
+				padding-top: 114px;
+                margin-left: 130px;
+			}
+
+			&__link {
+				font-size: 21px;
+			}
+
+			&__icons {
+				padding-top: 65px;
+			}
+
+			&__text {
+				margin-top: 39px;
+			}
+		}
 	}

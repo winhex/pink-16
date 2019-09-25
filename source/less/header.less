@@ -18,6 +18,10 @@
 		position: absolute;
 	}
 
+	&--opened {
+		background-color: #283645;
+	}
+
 	&__header {
 		display: flex;
 		padding:20px;
@@ -176,7 +180,8 @@
 	.main-nav {
 
 		display: flex;
-		padding-bottom: 24px;
+		padding-bottom: 0;
+		height: 110px;
 
 
 
@@ -190,11 +195,12 @@
 			border-bottom: none;
 			padding:0;
 			margin-left: 130px;
-			margin-top: 22px;
+			margin-top: 27px;
 			margin-right: 173px;
 		}
 
 		&__menu {
+
 			flex-direction: row;
 			margin-top: 18px;
 		}
@@ -211,6 +217,11 @@
 			font-weight: 400;
 			line-height: 18px;
 		}
+	}
+
+	.main-nav--closed .main-nav__menu {
+		display: flex;
+		margin-top: 23px;
 	}
 
 
