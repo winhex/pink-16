@@ -26,9 +26,10 @@
 
 	&__list {
 		position: relative;
-		
+		background-color: #f2f2f2;
 		.reset-list();
 		margin-top: 115px;
+		padding-bottom: 312px;
 		
 		&::before {
 			position: absolute;
@@ -42,13 +43,35 @@
 		    background: #f2f2f2 url(../img/bg-triangle-white.svg) center top no-repeat;
 		    background-size: 100%;
 
-	}
+		}
+		
+		&::after {
+			position: absolute;
+			content: "";
+			background-image: url("../img/iphone_screen_mobile@1x.png");
+	// background-size: 320px auto;
+	background-repeat: no-repeat;
+	margin-left: auto;
+    margin-right: auto;
+    left: 0;
+	right: 0;
+	width: 157px;
+	height: 320px;
+	clip: rect(auto, auto, 277px, auto);
+	bottom: -42px;
+		}
 
 	&--text {
 		max-width: 260px;
 		text-align: center;
 		margin: 0;
 		background-color: #f2f2f2;
+	}
+
+	&-item {
+		margin-bottom: 43px;
+		margin-left: 10%;
+        margin-right: 10%;
 	}
 
 
