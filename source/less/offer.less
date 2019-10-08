@@ -100,13 +100,29 @@
 
 			&__list {
 
+				&-container {
+					min-height: 418px;
+                    background-color: #f2f2f2;
+				}
+
 				padding-bottom: 0;
+				padding-left: 295px;
+                text-align: left;
+
 				&::after {
 					background-size: 268px auto;
 					width: 268px;
                     height: 547px;
 					margin-left: unset;
+					
+                padding-top: 6px;
 				background-image: url("../img/iphone_screen_tablet@1x.png");
+				clip: rect(auto, auto, 481px, auto);
+    			left: 21px;
+                top: -63px;
+                padding-bottom: 0;
+                padding-left: 293px;
+                text-align: left;
 			       @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
                      background-image: url("../img/iphone_screen_tablet@2x.png");
                    }
@@ -114,6 +130,9 @@
 
 				&::before {
 					top: -69px;
+				}
+				&-item {
+					padding-top: 5px;
 				}
 			}
 
@@ -133,6 +152,57 @@
                 }
 			}
 		}
+
+		&__title {
+			margin-bottom: 3px;
+		}
+
+
+	}
+
+
+	@media (min-width: @desktop-width) {
+
+		.offer {
+
+			&__text {
+				font-size: 50px;
+				font-weight: 300;
+			}
+
+			&__list {
+
+				&::before {
+					display: none;
+				}
+
+				&-container
+
+				position: relative;
+
+				{
+					&::before {
+						position: absolute;
+						content: "";
+						top: -78px;
+						left: -1px;
+						height: 100%;
+						width: 100%;
+						z-index: -1;
+		                // background-image: linear-gradient(-5deg, #f2f2f2 50%, #ffffff 50%);
+		                background: #f2f2f2 url(../img/bg-triangle-white.svg) center top no-repeat;
+		                background-size: 100%;
+		            }
+		        }
+		        display: flex;
+		        padding-left: 0
+
+		        &::after {
+		        	display: none;
+		        }
+		    }
+		}
+
 
 
 	}
