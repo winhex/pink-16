@@ -168,23 +168,33 @@
 			&__text {
 				font-size: 50px;
 				font-weight: 300;
+
+				&:last-child {
+					max-width: 415px;
+					margin-top: 11px;
+				}
 			}
 
 			&__list {
+				display: flex;
+				padding-left: 0;
 
 				&::before {
 					display: none;
 				}
 
-				&-container
+				&-container {
+					display: flex;
+		            padding-left: 0;
+					position: relative;
+					padding-top: 56px;
+					margin-bottom: 200px;
 
-				position: relative;
-
-				{
+				
 					&::before {
 						position: absolute;
 						content: "";
-						top: -78px;
+						top: -104px;
 						left: -1px;
 						height: 100%;
 						width: 100%;
@@ -194,14 +204,19 @@
 		                background-size: 100%;
 		            }
 		        }
-		        display: flex;
-		        padding-left: 0
+		        
 
 		        &::after {
 		        	display: none;
 		        }
-		    }
+			}
+
+			&__title {
+				font-size: 30px;
+                line-height: 30px;
+			}
 		}
+		
 
 
 
