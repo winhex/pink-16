@@ -165,6 +165,13 @@
 
 		.offer {
 
+			&__container {
+				padding-top: 54px;
+				margin-bottom: 200px;
+
+
+			}
+
 			&__text {
 				font-size: 50px;
 				font-weight: 300;
@@ -178,6 +185,9 @@
 			&__list {
 				display: flex;
 				padding-left: 0;
+				width: 100%;
+                padding-left: 132px;
+                
 
 				&::before {
 					display: none;
@@ -188,8 +198,7 @@
 		            padding-left: 0;
 					position: relative;
 					padding-top: 56px;
-					margin-bottom: 200px;
-
+					
 				
 					&::before {
 						position: absolute;
@@ -208,6 +217,12 @@
 
 		        &::after {
 		        	display: none;
+		        }
+
+		        &-item {
+		        	margin: 0;
+		        	max-width: 307px;
+                    text-align: center;
 		        }
 			}
 
