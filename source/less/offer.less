@@ -183,10 +183,14 @@
 			}
 
 			&__list {
+				position: relative;
 				display: flex;
 				padding-left: 0;
 				width: 100%;
-                padding-left: 132px;
+                //padding-left: 132px;
+                justify-content: space-between;
+                padding-left: 125px;
+                padding-right: 163px;
                 
 
 				&::before {
@@ -223,12 +227,39 @@
 		        	margin: 0;
 		        	max-width: 307px;
                     text-align: center;
+                    padding-top: 81px;
+
+                    &:first-child:before {
+                    	position: absolute;
+                    	content: "";
+                    	background: url(../img/iphone-desktop-bw@1x.png) center top no-repeat;
+		                background-size: 100%;
+
+                    }
+
+                    &:last-child {
+                    	//margin-left: 43px;
+                    }
+
+                    &:last-child .offer__title {
+                    	width: 222px;
+                    	margin: 0 auto;
+                    }
+		        }
+
+		        &--text {
+		        	width: 240px;
+                    font-size: 18px;
+                    line-height: 30px;
+                    margin: 0 auto;
+                    display: block;
 		        }
 			}
 
 			&__title {
 				font-size: 30px;
                 line-height: 30px;
+                padding-bottom: 29px;
 			}
 		}
 		
