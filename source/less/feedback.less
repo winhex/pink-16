@@ -1,0 +1,63 @@
+.effect,
+.feedback__about {
+    display: none;
+}
+
+.feedback {
+
+    &__name {
+        font-size: 18px;
+    font-weight: 700;
+    line-height: 30px;
+    text-align: center;
+    }
+    
+    &__text {
+        max-width: 276px;
+        text-align: center;
+        margin: 0 auto;
+        font-size: 14px;
+    font-weight: 400;
+    }
+
+    &__pagination {
+        width: 6px;
+    height: 6px;
+    background-color: rgba(40, 54, 69, 0.3);
+    border-radius: 6px;
+    // opacity: 0.3;
+    margin: 0 auto;
+    position: relative;
+
+    &:before {
+        content:"";
+        position: absolute;
+        width: 12px;
+    height: 12px;
+        
+    border: 3px solid #283645;
+    border-radius: 50%;
+    right: 17px;
+    top: -3px;
+    }
+
+    &:after {
+        content:"";
+        position: absolute;
+        width: 6px;
+        height: 6px;
+        background-color: rgba(40, 54, 69, 0.3);
+        border-radius: 6px;
+        
+        left: 17px;
+    }
+
+      
+
+    }
+
+
+
+
+}
+
