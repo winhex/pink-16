@@ -1,15 +1,19 @@
-.effect,
+
 .feedback__about {
     display: none;
 }
 
 .feedback {
 
+    margin-top: 41px;
+
     &__name {
         font-size: 18px;
     font-weight: 700;
     line-height: 30px;
     text-align: center;
+    margin: 0;
+
     }
     
     &__text {
@@ -18,6 +22,9 @@
         margin: 0 auto;
         font-size: 14px;
     font-weight: 400;
+    margin-top: 13px;
+    margin-bottom: 35px;
+    line-height: 30px;
     }
 
     &__pagination {
@@ -37,7 +44,7 @@
         
     border: 3px solid #283645;
     border-radius: 50%;
-    right: 17px;
+    right: 22px;
     top: -3px;
     }
 
@@ -49,7 +56,7 @@
         background-color: rgba(40, 54, 69, 0.3);
         border-radius: 6px;
         
-        left: 17px;
+        left: 25px;
     }
 
       
@@ -58,6 +65,36 @@
 
 
 
+
+}
+
+@media (min-width: @tablet-width) {
+
+    .feedback {
+        display: flex;
+        flex-direction: column;
+        margin-top: 85px;
+
+        &__text {
+            order: -1;
+            max-width: 617px;
+            font-size: 18px;
+font-weight: 400;
+line-height: 30px;
+        }
+
+        &__name {
+            font-size: 20px;
+font-weight: 700;
+        }
+
+        &__about {
+            display: block;
+            text-align: center;
+            margin-top: 4px;
+    margin-bottom: 40px;
+        }
+}
 
 }
 

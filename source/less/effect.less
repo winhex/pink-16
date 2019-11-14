@@ -1,3 +1,42 @@
 .effect {
     display: none;
 }
+
+
+@media (min-width: @tablet-width) {
+
+	.effect {
+		display: block;
+		max-width: 632px;
+    padding-left: 330px;
+    background-image: url("../img/clock.png");
+    background-repeat: no-repeat;
+    min-height: 292px;
+    background-position: 22px 15px;
+
+
+     &__title {
+     	margin:0;
+     	font-size: 30px;
+font-weight: 700;
+line-height: 36px;
+     }
+
+     &__inner {
+     	padding-top: 52px;
+     }
+
+     &__text {
+     	font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    margin: 0;
+    margin-top: 11px;
+    margin-bottom: 10px;
+     }
+
+     a {
+     	color: #d22856;
+     }
+	}
+}
