@@ -1,22 +1,92 @@
 .price {
 	&__table {
-		display: table;
-		border: 1px solid #e5e5e5;
-		width: 928px;
+		display:table;
 		border-collapse: collapse;
+		width:938px;
 
-		td, th {
-			border:2px solid #e5e5e5;
+		header {
+			display: table-header-group;
+
+			li {
+				height: 94px;
+				background-color: #283645;
+				text-align: center;
+
+				&:first-child {
+					background-color: unset;
+					border: none;
+				}
+
+			}
+		}
+
+		ul {
+			display:table-row;
+		}
+
+		li {
+			display: table-cell;
+			height: 59px;
+			width: 233px;
+			border: 2px solid #e5e5e5;
+			vertical-align: middle;
+			text-align: center;
+			background-repeat: no-repeat;
+			background-position: center;
+		}
+
+		ul li:first-child {
+			color: #283645;
+			font-size: 18px;
+			font-weight: 400;
+			line-height: 30px;
+			padding-left: 24px;
+			vertical-align: middle;
+			font-family: "Open Sans";
+
+
+		}
+
+		
+
+	}
+
+	&__yes {
+		background-image: url("../img/yes.png");
+	}
+	&__no {
+		background-image: url("../img/no.png");
+	}
+	&__header {
+		color: #ffffff;
+		text-transform: uppercase;
+		font-size: 18px;
+		font-weight: 700;
+		line-height: 30px;
+	}
+
+	&__usd {
+		color: #ffffff;
+		font-size: 24px;
+		font-weight: 300;
+		line-height: 30px;
+		text-transform: uppercase;
+		margin: 0;
+	}
+
+	&--hit {
+		position: relative;
+		&::before {
+			position: absolute;
+			content: "";
+			background-image: url("../img/hit.png");
+			height: 73px;
+			width: 74px;
+			left: 0;
+			top: -18px;
 		}
 	}
-}
 
-.row {
-	display: table-row;
 	
 }
 
-.cell {
-	display: table-cell;
-	border: 1px solid #e5e5e5;
-}
