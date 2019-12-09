@@ -1,8 +1,47 @@
 .price {
+
+	position: relative;
+	padding-top: 45px;
+	padding-bottom: 95px;
+
+	&:before {
+	position: absolute;
+    content: "";
+    top: -100px;
+    height: 102px;
+    width: 100%;
+    background: #f2f2f2 url(../img/bg-triangle-white.svg) center top no-repeat;
+    background-size: 100%;
+	}
+
+	background-color: #f2f2f2;
+
+	@media (min-width: @mobile-width) {
+		 	overflow: hidden;
+		}
+
+
 	&__table {
 		display:table;
 		border-collapse: collapse;
-		width:938px;
+		@media (min-width: @mobile-width) {
+		 	width: 260%;
+		 	transform: translateX(-43%);
+		}
+
+		@media (min-width: @tablet-width) {
+			width:616px;
+		}
+
+		@media (min-width: @desktop-width) {
+			width:938px;
+
+		}
+
+		
+		
+
+		margin: 0 auto;
 
 		header {
 			display: table-header-group;
@@ -26,11 +65,11 @@
 
 		li {
 			display: table-cell;
-			height: 59px;
+			height: 62px;
 			width: 233px;
 			border: 2px solid #e5e5e5;
 			vertical-align: middle;
-			text-align: center;
+			// text-align: center;
 			background-repeat: no-repeat;
 			background-position: center;
 		}
@@ -40,7 +79,7 @@
 			font-size: 18px;
 			font-weight: 400;
 			line-height: 30px;
-			padding-left: 24px;
+			padding-left: 19px;
 			vertical-align: middle;
 			font-family: "Open Sans";
 
@@ -63,6 +102,7 @@
 		font-size: 18px;
 		font-weight: 700;
 		line-height: 30px;
+		margin: 0;
 	}
 
 	&__usd {
