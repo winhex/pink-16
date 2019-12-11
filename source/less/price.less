@@ -17,7 +17,16 @@
 	background-color: #f2f2f2;
 
 	@media (min-width: @mobile-width) {
-		 	overflow: hidden;
+			 overflow: hidden;
+			 margin-top: 136px;
+			 padding-top: 0;
+
+			 &__mobile {
+				 text-transform: uppercase;
+				 margin-left: 20px;
+			 }
+			 
+			 
 		}
 
 
@@ -25,16 +34,18 @@
 		display:table;
 		border-collapse: collapse;
 		@media (min-width: @mobile-width) {
-		 	width: 260%;
-		 	transform: translateX(-43%);
+			width: 337%;
+			transform: translateX(-47.6%);
 		}
 
 		@media (min-width: @tablet-width) {
 			width:616px;
+			transform: none;
 		}
 
 		@media (min-width: @desktop-width) {
 			width:938px;
+			transform: none;
 
 		}
 
@@ -127,6 +138,12 @@
 		}
 	}
 
-	
+	@media (min-width: @mobile-width) {
+
+		&__yes--mobile {
+			background-position: right;
+		}
+
+	}
 }
 
