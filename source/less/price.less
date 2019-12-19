@@ -4,12 +4,68 @@
 	padding-top: 45px;
 	padding-bottom: 95px;
 
-	
+	&__inner {
+		height: 15px;
+
+		@media (min-width: @tablet-width) {
+			display: none;
+		}
+
+		@media (min-width: @desktop-width) {
+			display: none;
+		}
+
+		 
+
+
+
+
+	}
+
+	&__pagination {
+		width: 12px;
+	height: 12px;
+	border: 3px solid #283645;
+    border-radius: 50%;
+    //     width: 6px;
+    // height: 6px;
+    // background-color: rgba(40, 54, 69, 0.3);
+    // border-radius: 6px;
+    // opacity: 0.3;
+    margin: 0 auto;
+    position: relative;
+
+    &:before {
+        content:"";
+        position: absolute;
+        width: 6px;
+    height: 6px;
+	background-color: rgba(40, 54, 69, 0.3);
+    border-radius: 6px;
+    
+    right: 25px;
+    // top: -3px;
+    }
+
+    &:after {
+        content:"";
+        position: absolute;
+        width: 6px;
+        height: 6px;
+        background-color: rgba(40, 54, 69, 0.3);
+        border-radius: 6px;
+        
+        left: 25px;
+    }
+
+      
+
+    }
 
 	background-color: #f2f2f2;
 
 	@media (min-width: @mobile-width) {
-			 overflow: hidden;
+			//  overflow: hidden;
 			 margin-top: 136px;
 			 padding-top: 0;
 
@@ -34,8 +90,8 @@
 		&:before {
 	position: absolute;
     content: "";
-    top: -100px;
-    height: 102px;
+    top: -111px;
+    height: 109px;
     width: 100%;
     background: #f2f2f2 url(../img/bg-triangle-white.svg) center top no-repeat;
     background-size: 100%;
@@ -64,6 +120,7 @@
 		
 
 		margin: 0 auto;
+		margin-bottom: 38px;
 
 		header {
 			display: table-header-group;
