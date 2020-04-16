@@ -1,14 +1,19 @@
 .footer {
 
-    padding-top: 43px;
+    &__main {
+        padding-top: 49px;
+    }
+
+    
+
     &__text {
         text-align: center;
         color: #283645;
-// font-family: "Open Sans";
-font-size: 24px;
-font-weight: 300;
-margin: 0;
-line-height: 27px;
+        font-size: 24px;
+        font-weight: 300;
+        margin: 0;
+        line-height: 11px;
+        margin-bottom: 23px;
 
     }
 }
@@ -21,5 +26,46 @@ line-height: 27px;
     &__contacts {
         display: flex;
         flex-direction: column;
+    }
+
+    &__header {
+        color: #283645;
+        margin-bottom:3px;
+        font-size: 18px;
+        font-weight: 700;
+    }
+
+    &__text {
+        color: #d22856;
+
+        font-size: 24px;
+        font-weight: 300;
+    }
+}
+
+
+@media (min-width: @tablet-width) {
+
+    .footer {
+        &__text {
+            font-size: 40px;
+font-weight: 300;
+        }
+    }
+
+
+
+}
+
+@media (min-width: @desktop-width)  {
+    .footer {
+        &__top {
+            padding-top: 48px;
+        }
+        &__text {
+            font-size: 50px;
+            line-height: 33px;
+            font-weight: 300;
+        }
     }
 }
